@@ -1,0 +1,20 @@
+# Run with:  docker compose up -d --build
+# Put your settings in a file called ".env" next to this one (copy .env.example).
+services:
+  workspace:
+    build: .
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      NODE_ENV: production
+      HOST: 0.0.0.0
+      PORT: 3000
+      DATA_DIR: /app/data
+      TRUST_PROXY: "true"   # you will put HTTPS (Caddy, Nginx, Cloudflare) in front of it
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      - workspace-data:/app/data
+
+volumes:
+  workspace-data:

@@ -1,0 +1,31 @@
+### Try the API from VS Code (install the "REST Client" extension, then click "Send Request").
+### Start the server first:  npm start       Replace the values in {{ }} and <...> with your own.
+
+@base = http://127.0.0.1:3000
+
+### Is the server alive?
+GET {{base}}/api/health
+
+### Who am I? (no cookie yet, so "user": null)
+GET {{base}}/api/session
+
+### Sign in. REST Client keeps the cookie for you.
+# @name login
+POST {{base}}/api/auth/login
+Content-Type: application/json
+X-Requested-With: bitwixt
+
+{ "email": "you@example.com", "password": "<your password>" }
+
+### Who am I now?
+GET {{base}}/api/session
+
+### Which AI services are ready?
+GET {{base}}/api/ai/providers
+
+### Ask the AI (non-streaming)
+POST {{base}}/api/ai/chat
+Content-Type: application/json
+X-Requested-With: bitwixt
+
+{ "prompt": "Write one friendly sentence welcoming a new client.", "stream": false }

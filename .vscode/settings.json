@@ -1,0 +1,14 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.eol": "\n",
+  "files.exclude": { "**/.git": true, "**/.DS_Store": true },
+  "search.exclude": { "data": true, "**/node_modules": true },
+  "javascript.suggest.autoImports": false,
+  "[markdown]": { "editor.formatOnSave": false },
+  "[sql]": { "editor.formatOnSave": false },
+  "rest-client.environmentVariables": {
+    "$shared": {},
+    "local": { "base": "http://127.0.0.1:3000" }
+  }
+}

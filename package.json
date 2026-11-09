@@ -1,0 +1,20 @@
+{
+  "name": "my-workspace",
+  "version": "1.0.0",
+  "description": "Invite-only team workspace: offers, quotations, content calendar, campaigns, ads, audits, tasks and chat. Zero npm dependencies.",
+  "private": true,
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test \"tests/*.test.js\"",
+    "setup:admin": "node scripts/setup-admin.js",
+    "backup": "node scripts/backup.js",
+    "gen:secret": "node scripts/gen-secret.js",
+    "check": "node scripts/check-syntax.js",
+    "build:preview": "node scripts/build-preview.js"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "Start server", "type": "npm", "script": "start", "problemMatcher": [], "group": "build" },
+    { "label": "Start server (restarts on changes)", "type": "npm", "script": "dev", "problemMatcher": [], "isBackground": true },
+    { "label": "Run tests", "type": "npm", "script": "test", "problemMatcher": [], "group": "test" },
+    { "label": "Check syntax", "type": "npm", "script": "check", "problemMatcher": [] },
+    { "label": "Back up the database", "type": "npm", "script": "backup", "problemMatcher": [] },
+    { "label": "Create admin from the command line", "type": "npm", "script": "setup:admin", "problemMatcher": [] }
+  ]
+}
